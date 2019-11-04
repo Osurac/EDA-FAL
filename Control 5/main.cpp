@@ -49,24 +49,20 @@ int exp_prefija(char a[], int n, int i) {
 
 	if (i != n) {
 
-		for (int j = 0; j <= i; j++) {
-			cont += nValores(a[j]);
-		}
-
-		if (!isDigit(a[0])) {
+		if (!isDigit(a[0])) {  //CB1: si el primer caracter no es un digito de notación devuelve -1 
 			return -1;
 		}
 		else {
-			if (isDigit(a[i])) {
+			if (isDigit(a[i])) { //CB2: Que empiece por un digito de notación y se llama recursivamente a la siguiente posición. 
 					return exp_prefija(a, n, i + 1);
 			}
 			else {	
-				return i;
+				return i; //En caso de que no devuelve la poisición actual.
 			}
 		}
 	}
 	else {
-			return i;
+			return i; //Si no es un dçigito de notación devolvemos la posición.
 	}
 
 }
