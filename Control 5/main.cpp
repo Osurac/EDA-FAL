@@ -66,36 +66,7 @@ int exp_prefija(char a[], int n, int i) {
 		}
 	}
 	else {
-
-		for (int j = 0; j < n; j++) {
-			cont += nValores(a[j]);
-		}
-
-		if (cont == 1) {
 			return i;
-		}
-		else {
-			int ret = 0;
-			if (cont < 0) {
-				
-				while (cont != 0) {
-					ret++;
-					cont++;
-				}
-				return ret;
-			}
-			else {
-
-				while (cont != 0) {
-					ret++;
-					cont--;
-				}
-				return ret;
-
-			}
-
-		}
-
 	}
 
 }
